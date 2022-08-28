@@ -8,6 +8,7 @@ public class hello {
         System.out.println("yes");
         System.out.println("3");
         System.out.println("hot-fix");
+        System.out.println("test");
 
     }
 }
