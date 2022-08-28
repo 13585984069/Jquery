@@ -10,8 +10,12 @@ public class hello {
         System.out.println("hot-fix");
         System.out.println("rebase1");
         System.out.println("rebase2");
+        System.out.println("rebase test01");
+        System.out.println("成功");
 
 
-        System.out.println("hot-fix");        System.out.println("hot-fix");
+
+
+        
     }
 }
