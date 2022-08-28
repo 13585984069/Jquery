@@ -7,6 +7,6 @@ public class hello {
         System.out.println("hello");
         System.out.println("yes");
         System.out.println("3");
-        System.out.println("hot");
+
     }
 }
