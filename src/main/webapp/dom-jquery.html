@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function (){
+            let username = document.getElementById("username");
+            alert("username value = " + username.value );
+            // 通过jquery获取
+            var $username = $("#username");
+            alert("jquery 111username: " + $username.val());
+            //  dom直接转jquery
+            var $username = $(username);
+            alert("jquery 222username: " + $username.val());
+        }
+    </script>
+</head>
+<body>
+<form>
+    username:  <input type="text" id="username" value="lala">
+</form>
+</body>
+</html>

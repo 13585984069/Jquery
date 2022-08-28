@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+
+
+        window.onload = function (){
+
+            var $username = $("#username");
+            alert("jquery" + $username.val());
+            // dom对象会报错
+            var elementById = document.getElementById("username");
+            alert("dom"+elementById.value);
+
+        }
+    </script>
+</head>
+<body>
+<form>
+    username:  <input type="text" id="username1" value="lala">
+</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw01</title>
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script>
+        // window.onload = function (){
+            // var pDo = document.getElementsByTagName("p");
+            // for (let i = 0; i < pDo.length; i++) {
+            //     pDo[i].onclick=function (){
+            //         alert(pDo[i].textContent);
+            //     };
+            // }
+        // }
+        $(function (){
+            $("p").click(function (){
+                alert($(this).html());
+            });
+
+        })
+    </script>
+</head>
+<body>
+<h1>网页中所有的 &lt;p&gt; 元素添加 onclick 事件</h1>
+<p>段落 1</p>
+<p>段落 2</p>
+<p>段落 3</p>
+</body>
+</html>

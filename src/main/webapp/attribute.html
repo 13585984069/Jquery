@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div, span {
+            width: 140px;
+            height: 140px;
+            margin: 20px;
+            background: #9999CC;
+            border: #000 1px solid;
+            float: left;
+            font-size: 17px;
+            font-family: Roman;
+        }
+
+        div.mini {
+            width: 60px;
+            height: 30px;
+            background: #CC66FF;
+            border: #000 1px solid;
+            font-size: 12px;
+
+        }
+    </style>
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function (){
+            $("#b1").click(function (){
+                $("div[title]").css("background","black");
+            })
+            $("#b2").click(function (){
+                $("div[title='test']").css("background","black");
+            })
+            $("#b3").click(function (){
+                $("div[title!='test']").css("background","black");
+            })
+            $("#b4").click(function (){
+                $("div[title^='te']").css("background","black");
+            })
+            $("#b5").click(function (){
+                $("div[title$='est']").css("background","black");
+            })
+            $("#b6").click(function (){
+                $("div[title*='es']").css("background","black");
+            })
+            $("#b7").click(function (){
+                $("div[id][title*='es']").css("background","black");
+            })
+        })
+    </script>
+</head>
+<body>
+<input type="button" value="含有属性 title 的 div 元素." id="b1"/><br/><br/>
+<input type="button" value="属性 title 值等于 test 的 div 元素" id="b2"/><br/><br/>
+<input type="button" value="属性 title 值不等于 test 的 div 元素(没有属性 title 的也将被选中)" id="b3"/><br/><br/>
+<input type="button" value="属性 title 值 以 te 开始 的 div 元素" id="b4"/><br/><br/>
+<input type="button" value="属性 title 值 以 est 结束 的 div 元素" id="b5"/><br/><br/>
+<input type="button" value="属性 title 值 含有 es 的 div 元素" id="b6"/><br/><br/>
+<input type="button" value="选取有属性 id 的 div 元素，然后在结果中选取属性 title 值含有“es”的 div 元素" id="b7"/><br/><br/>
+<div id="one" title="test"> div id 为 one test </div>
+<div id="one-1" title="texxx"> div id 为 one-1 texxx </div>
+<div id="one-2" title="xxxest"> div id 为 one-2 xxxest </div>
+<div id="one-3" title="xxxesxxxxxt">div id 为 one-3 xxxesxxxxxt </div>
+<div id="two" title="ate"> div id 为 two </div>
+<div id="three" class="one"> div id 为 three </div>
+</body>
+</html>

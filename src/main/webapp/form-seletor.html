@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div, span {
+            width: 140px;
+            height: 140px;
+            margin: 20px;
+            background: #9999CC;
+            border: #000 1px solid;
+            float: left;
+            font-size: 17px;
+            font-family: Roman;
+        }
+
+        div.mini {
+            width: 60px;
+            height: 30px;
+            background: #CC66FF;
+            border: #000 1px solid;
+            font-size: 12px;
+
+        }
+    </style>
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            var buttons=$(':button');
+            alert(buttons.length);
+            var buttons=$("input[type='button']");
+            //得到 type="button" 的元素 alert(buttons.length);
+            alert($("button").length); //得到<button />按照元素标签取值
+        })
+    </script>
+</head>
+<body>
+<form><input type="text"/><br/>
+    <input type="checkbox"/><br/>
+    <input type="radio"/><br/>
+    <input type="image" src="lib/tou.jpg" height="100"/><br/>
+    <input type="file"/><br/> <input type="submit"/><br/>
+    <input type="reset"/><br/>
+    <input type="password"/><br/>
+    <input type="button" value="按钮 1"/><br/>
+    <select>
+        <option/> </select>
+    <br/>
+    <textarea></textarea><br/>
+    <button>按钮 2</button>
+    <button>按钮 3</button> <br/>
+</form>
+</body>
+</html>

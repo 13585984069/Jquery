@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+
+
+        window.onload = function (){
+            var $username = $("#username");
+            alert("jquery 111username: " + $username.val());
+            alert($username);
+            // juqery 转dom 因为jquery是数组对象，因此可以以下标方式获取， 也可以通过get(index) 一般来说是0
+            var username1 = $username[0];
+            alert(username1);
+            alert("dom1 username: " + username1.value);
+            var username2 = $username.get(0);
+            alert("dom2 username: " + username2.value);
+
+        }
+    </script>
+</head>
+<body>
+<form>
+    username:  <input type="text" id="username" value="lala">
+</form>
+</body>
+</html>

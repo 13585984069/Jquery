@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div, span {
+            width: 140px;
+            height: 140px;
+            margin: 20px;
+            background: #9999CC;
+            border: #000 1px solid;
+            float: left;
+            font-size: 17px;
+            font-family: Roman;
+        }
+
+        div.mini {
+            width: 60px;
+            height: 30px;
+            background: #CC66FF;
+            border: #000 1px solid;
+            font-size: 12px;
+
+        }
+    </style>
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            $("#b1").click(function (){
+              $("input[type=text]:enabled").val("台球");
+            })
+            $("#b2").click(function (){
+                $("input[type=text]:disabled").val("台球");
+            })
+            $("#b3").click(function (){
+                var length = $("input[type=checkbox]:checked").length;
+                alert(length);
+            })
+            $("#b4").click(function (){
+                var $select = $("select[name=edu] option:selected");
+                $select.each(function (){
+                    alert("选择了："+ $(this).text());
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<input type="button" value="利用 jQuery 对象的 val() 方法改变表单内 type=text 可用 <input> 元素的值" id="b1"/><br/><br/>
+<input type="button" value="利用 jQuery 对象的 val() 方法改变表单内 type=text 不可用 <input> 元素的值" id="b2"/><br/><br/>
+<input type="button" value="利 用 jQuery 对 象的 length 属 性获 取 多 选框 选 中的 个 数 " id="b3"/><br/><br/>
+<input type="button" value=" 利 用 jQuery 对 象 的 text() 方 法 获 取 下 拉 框 选 中 的 内 容 " id="b4"/><br/><br/> <br>
+<input type="text" value="篮球 1"/>
+<input type="text" value="篮球 2"/>
+<input type="text" value="篮球 3" disabled="true"/>
+<input type="text" value="篮球 4" disabled="true"/> <br>
+<h1>选择你的爱好</h1>
+<input type="checkbox" value="爱好 1"/>爱好 1
+<input type="checkbox" value="爱好 2"/>爱好 2
+<input type="checkbox" value="爱好 3"/>爱好 3
+<input type="checkbox" value="爱好 4"/>爱好 4 <br>
+<h1>选项如下:</h1>
+<select name="job" size=9 multiple="multiple">
+    <option value="选项 1">选项 1^^</option>
+    <option value="选项 2">选项 2^^</option>
+    <option value="选项 3">选项 3^^</option>
+    <option value="选项 4">选项 4^^</option>
+    <option value="选项 5">选项 5^^</option>
+    <option value="选项 6">选项 6^^</option>
+</select>
+<select id="hsp" name="edu">
+    <option value="博士">博士^^</option>
+    <option value="硕士">硕士^^</option>
+    <option value="本科">本科^^</option>
+    <option value="小学">小学^^</option>
+</select>
+</body>
+</html>

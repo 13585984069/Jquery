@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple</title>
+<!--    <script type="text/javascript">-->
+<!--        window.onload = function (){-->
+<!--            let btn01 = document.getElementById("btn01");-->
+<!--            btn01.onclick = function (){-->
+<!--                alert("js");-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+    <script type="text/javascript" src="/lib/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            let $btn01 = $("#btn01");
+            $btn01.click(function (){
+                alert("jquery");
+            })
+        });
+    </script>
+
+</head>
+<body>
+
+<button id="btn01" value="点击">点击</button>
+
+</body>
+</html>

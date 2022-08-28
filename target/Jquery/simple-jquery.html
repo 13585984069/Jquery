@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery</title>
+<!--    <script type="text/javascript">-->
+<!--        window.onload = function (){-->
+<!--        dom对象-->
+<!--            let bt = document.getElementById("btn01");-->
+<!--            bt.onclick = function (){-->
+<!--                alert("hello, js");-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+<!--    webjars/jquery/3.6.0/jquery.min.js-->
+<!--    <script type="text/javascript" src="webjars/jquery/3.6.0/jquery.min.js"></script>-->
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        // $(function (){
+        //     alert("hello, jquery");
+        // });
+        $(function (){
+            // $btn01是jquery对象 $("#必须带#号")
+            // 规定jquery中变量名用$开始，规定但不是必须
+           let $btn01 = $("#btn01");
+           $btn01.click(function (){
+              alert("hello,jquery1");
+           });
+        });
+    </script>
+</head>
+<body>
+<button id="btn01"> 按钮</button>
+</body>
+</html>
