@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作节点的属性</title>
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //给 button 绑定一个 click 事件
+            $("#btn01").click(function () {
+                $("img").attr("height", "200");
+                alert($("img").attr("height"));
+            })
+        });
+    </script>
+</head>
+<body>
+<img src="lib/img.jpg" height="100" /> <br/>
+<button id="btn01">设置图像的 height 属性</button>
+</body>
+</html>

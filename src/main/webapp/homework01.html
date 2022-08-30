@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw01</title>
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function (){
+            $("#btn01").click(function (){
+                let $children = $("label > input[type=checkbox]:checked");
+                alert($children.length);
+                $children.each(function (){
+                    alert($(this).val());
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<form>
+    <label>
+        <input type="checkbox" name="sport" value="篮球">篮球
+        <input type="checkbox" name="sport" value="足球">足球
+        <input type="checkbox" name="sport" value="羽毛球">羽毛球
+        <input type="checkbox" name="sport" value="乒乓球">乒乓球
+    </label>
+    <input type="button" id="btn01" value="选中的个数">
+</form>
+</body>
+</html>

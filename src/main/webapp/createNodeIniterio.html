@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建节点-应用实例</title>
+    <style type="text/css">
+        div, span {
+            width: 140px;
+            height: 140px;
+            margin: 20px;
+            background: #9999CC;
+            border: #000 1px solid;
+            float: left;
+            font-size: 17px;
+            font-family: Roman;
+        }
+
+        div.mini {
+            width: 30px;
+            height: 30px;
+            background: #CC66FF;
+            border: #000 1px solid;
+            font-size: 12px;
+            font-family: Roman;
+        }
+    </style>
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script>
+        function test1(){
+            let myli = document.createElement("li");
+            myli.setAttribute("id", "cq");
+            myli.setAttribute("name", "chongqing");
+            myli.innerHTML = "重庆";
+            document.getElementById("sh").append(myli);
+        }
+        $(function (){
+            $("#b1").click(function (){
+               $myli = $("<li id='cq' name='chongqing'>重庆</li>");
+                $myli.appendTo($("#sh"));
+            })
+            $("#b2").click(function (){
+                $myli = $("<li id='cq' name='chongqing'>重庆</li>");
+                $myli.insertAfter($("#sh"));
+            })
+            $("#b4").click(function (){
+                $myli = $("<li id='cq' name='chongqing'>重庆</li>");
+                $("#sh").prepend($myli);
+            })
+            $("#b5").click(function (){
+                $myli = $("<li id='cq' name='chongqing'>重庆</li>");
+                $("#jl").prepend($myli);
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul id="city">
+        <li id="bj" name="beijing">北京</li>
+        <li id="sh" name="shanghai">上海</li>
+        <li id="jl" name="jilin">吉林</li>
+        <li id="my" name="mianyang">绵阳</li>
+    </ul>
+    <input type="button" id="b3" onclick="test1()" value="添加重庆 li 到 上海下(使用 dom 的传统方 法)"/><br/><br/>
+    <input type="button" id="b1" value="添加重庆 li 到 上海下"/><br/><br/>
+    <input type="button" id="b2" value="添加成都 li 到 北京前"/><br/><br/>
+    <input type="button" id="b4" value="添加成都 li 到 北京和重庆之间"/><br/><br/>
+    <input type="button" id="b5" value="添加成都 li 到 吉林前面"/><br/>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function (){
+            $("#username").focus(function (){
+                let val = $(this).val();
+                if(val ===this.defaultValue){
+                    $(this).val("");
+                }
+            })
+            $("#username").blur(function (){
+                let val = $(this).val();
+                if(val === ""){
+                    $(this).val(this.defaultValue);
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<form>
+    <input type="text" value="用户邮箱/手机号/用户名" id="username">
+    <input type="password" id="password">
+    <input type="button" value="登录">
+</form>
+</body>
+</html>

@@ -12,6 +12,7 @@ public class hello {
         System.out.println("rebase2");
         System.out.println("rebase test01");
         System.out.println("成功");
+        System.out.println("c");
 
 
 

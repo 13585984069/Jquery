@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多选框应用</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="multi.js"></script>
+</head>
+<body>
+<div style="border:1px dashed #E6E6E6;margin:150px 0px 0px 450px; width:350px; height:200px; background-color:#E6E6E6;">
+    <table width="285" height="169" border="0" align="left" cellpadding="0" cellspacing="0"
+           style="margin:15px 0px 0px 15px;">
+        <tr>
+            <td width="126">
+                <select name="first" size="10" multiple="multiple" class="td3" id="first" >
+                <option value="选项 1">选项 1</option>
+                <option value="选项 2">选项 2</option>
+                <option value="选项 3">选项 3</option>
+                <option value="选项 4">选项 4</option>
+                <option value="选项 5">选项 5</option>
+                <option value="选项 6">选项 6</option>
+                <option value="选项 7">选项 7</option>
+                <option value="选项 8">选项 8</option>
+            </select></td>
+            <td width="69" valign="middle">
+                <input name="add" id="add" type="button" class="button" value="-->"/>
+                <input name="add_all" id="add_all" type="button" class="button" value="==>"/>
+                <input name="remove" id="remove" type="button" class="button" value="&lt;--"/>
+                <input name="remove_all" id="remove_all" type="button" class="button" value="&lt;=="/></td>
+            <td width="127" align="left"><select name="second" size="10" multiple="multiple" class="td3" id="second">
+                <option value="选项 9">选项 9</option>
+            </select></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

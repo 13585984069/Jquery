@@ -10,3 +10,5 @@
 *.xml
 .idea
 /target/
+*.jpg
+.gitignore
