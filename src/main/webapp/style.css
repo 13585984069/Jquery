@@ -132,6 +132,9 @@ BODY {
     text-align: center;
     background-color: #F6F6F6;
 }
+.mid {
+    align-content: center;
+}
 
 .td3 {
     background-color: #B8D3F4;

@@ -2,9 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>homework2</title>
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function (){
+            $("#btn01").click(function (){
+                // 用设置值比较方便，添加属性太麻烦要添加要删除
+                $("#one").val("2号");
+            })
+            $("#btn02").click(function (){
+                $("#two").val(["2号","5号"]);
+            })
+            $("#btn03").click(function (){
+                $("input[name='ck']").val(["复选2","复选4"]);
+            })
+            $("#btn04").click(function (){
+                $("input[name='sc']").val(["单选2"]);
+            })
+            $("#btn05").click(function (){
+                $("#one").each(function (){
+                    console.log($(this).val())
+                })
+                $("#two").each(function (){
+                    console.log($(this).val())
+                })
+                $("input[name='ck']:checked").each(function (){
+                    console.log($(this).val())
+                })
+                $("input[name='sc']:checked").each(function (){
+                    console.log($(this).val())
+                })
+
+            })
+
+        })
+    </script>
 </head>
 <body>
-
+<input type="button" id="btn01" value="使单选下拉框的2号被选中">
+<input type="button" id="btn02" value="使多选下拉框中的2号和5号被选中">
+<input type="button" id="btn03" value="使复选框的2、4被选中">
+<input type="button" id="btn04" value="使单选框的2被选中">
+<input type="button" id="btn05" value="打印已经被选中的值">
+<br>
+<hr>
+<select id="one">
+    <option value="1号">1号</option>
+    <option value="2号">2号</option>
+    <option value="3号">3号</option>
+    <option value="4号">4号</option>
+</select>
+<select size="10" multiple="multiple" id="two" >
+    <option value="1号">选项 1</option>
+    <option value="2号">选项 2</option>
+    <option value="3号">选项 3</option>
+    <option value="4号">选项 4</option>
+    <option value="5号">选项 5</option>
+    <option value="6号">选项 6</option>
+</select>
+<br>
+<input type="checkbox" name="ck" value="复选1">复选1
+<input type="checkbox" name="ck" value="复选2">复选2
+<input type="checkbox" name="ck" value="复选3">复选3
+<input type="checkbox" name="ck" value="复选4">复选4
+<br>
+<input type="radio" name="sc" value="单选1">单选1
+<input type="radio" name="sc" value="单选2">单选2
+<input type="radio" name="sc" value="单选3">单选3
 </body>
 </html>

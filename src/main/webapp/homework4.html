@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homework4</title>
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script>
+        function deleteUser($a){
+            var confirm = window.confirm("你确认要删除"+$a.attr("id"));
+            if(confirm){
+                $a.parent().parent().remove();
+            }
+            return false;
+
+
+        }
+
+        $(function (){
+            $("a").click(function (){
+                return deleteUser($(this));
+            })
+            $("#btn").click(function (){
+                let $username = $("#username").val();
+                let $email = $("#email").val();
+                let $phone = $("#phone").val();
+                if($username !=="" && $email !=="" && $phone !==""){
+                    let $nameTd = $("<td/>");
+                    $nameTd.append($username);
+
+                    let $emailTd = $("<td/>");
+                    $emailTd.append($email);
+
+                    let $phoneTd = $("<td/>");
+                    $phoneTd.append($phone);
+                    let $DeleteTd = $("<td/>");
+                    let $a = $("<a/>");
+                    $a.attr("id", $username);
+                    $a.attr("href", "deleteEmp?id="+$username);
+                    $a.html("Delete");
+                    $a.click(function (){
+                        // 如果return false就放弃提交
+                        return deleteUser($a);
+                    })
+                    $DeleteTd.append($a);
+
+
+                    let $tr = $("<tr>");
+                    $tr.attr("align","center");
+                    $tr.append($nameTd);
+                    $tr.append($emailTd);
+                    $tr.append($phoneTd);
+                    $tr.append($DeleteTd);
+                    $tr.append($("</tr>"));
+
+                    $("#t1").append($tr);
+                }else{
+                    alert("信息不全");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<h1 align="center">添加用户</h1>
+姓名: <input name="info" type="text" id="username">
+email: <input name="info" type="text" id="email">
+电话: <input name="info" type="text" id="phone">
+<br>
+<div align="center">
+    <input type="button" id="btn" value="提交">
+</div>
+<hr>
+<table align="center" border="1px" width="500px" id="t1">
+    <tr>
+        <th>姓名</th>
+        <th>email</th>
+        <th>电话</th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>姓名</th>
+        <th>email</th>
+        <th>电话</th>
+        <th>Delete</th>
+    </tr>
+    <tr align="center">
+        <td>姓名</td>
+        <td/>email
+        <td/>电话
+        <td/><a id="tom" href="deleteEmp?id=Tom">Delete</a>
+    </tr>
+</table>
+</body>
+</html>

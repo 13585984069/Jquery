@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hm03</title>
+    <script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function (){
+            $("#btn01").click(function (){
+                // 不适用attr 用prop
+                $("input[name='c2']").prop("checked", true);
+            })
+            $("#btn02").click(function (){
+                // $("input[name='c2']").each(function (){
+                //     if(this.hasAttribute("checked")){
+                //         $(this).removeAttr("checked");
+                //     }
+                // })
+                $("input[name='c2']").prop("checked", false);
+            })
+            $("#btn03").click(function (){
+                $("input[name='c2']").each(function (){
+                    if(this.checked){
+                        $(this).prop("checked", false);
+                    }else{
+                        $(this).prop("checked", true);
+                    }
+                    // if(!$(this).prop("checked")){
+                    //     $(this).prop("checked", true);
+                    // }else {
+                    //     $(this).prop("checked", false);
+                    // }
+                })
+            })
+            $("#btn04").click(function (){
+                // $("input[name='c2']").each(function (){
+                //     if($(this).prop("checked")){
+                //         alert($(this).val())
+                //     }
+                // })
+                $("input[name='c2']").each(function (){
+                    alert(this.checked);
+                })
+            })
+            $("input[name='c1']").click(function (){
+                if($("input[name='c1']").prop("checked")){
+                    $("input[name='c2']").prop("checked", true);
+                }else{
+                    $("input[name='c2']").prop("checked", false);
+                }
+
+            })
+        })
+    </script>
+</head>
+<body>
+<h2>请选择您的爱好</h2>
+<input type="checkbox" name="c1" value="chooseOrNot">全选/全不选
+<br>
+<input type="checkbox" name="c2" value="足球">足球
+<input type="checkbox" name="c2" value="篮球">篮球
+<input type="checkbox" name="c2" value="游泳">游泳
+<input type="checkbox" name="c2" value="唱歌">唱歌
+<br>
+<input type="button" id="btn01" value="全选">
+<input type="button" id="btn02" value="全不选">
+<input type="button" id="btn03" value="反选">
+<input type="button" id="btn04" value="打印">
+</body>
+</html>
